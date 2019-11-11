@@ -13,12 +13,11 @@ def subtraction(a, b):
 def multiplication(a, b):
     a = int(a)
     b = int(b)
-    c = a * b
+    c = a*b
 
 def division(a, b):
-    a = int(a)
-    b = int(b)
     c = a / b
+    return c
 
 def squaring(a):
     return int(a)**2
