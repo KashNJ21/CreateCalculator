@@ -67,9 +67,6 @@ class Calculator:
         self.result = squareroot(a)
         return self.result
 
-    def times(self,a, b):
-        self.result = multiplication(a, b)
-        return self.result
 
 
 

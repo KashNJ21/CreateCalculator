@@ -1,10 +1,10 @@
 import unittest
 from Calculator import Calculator
 from CsvReader import CsvReader
-from pprint import pprint
 calculator = Calculator()
 
 class MyTestCase(unittest.TestCase):
+
 
     def test_addition_calculator(self):
         test_input = CsvReader('/src/Addition.csv').data
@@ -36,11 +36,6 @@ class MyTestCase(unittest.TestCase):
         for row in test_input:
             result = round(calculator.sqroot(int(row['Value 1'])), 8)
             self.assertEqual(result, round(float(row['Result']), 8))
-
-    def test_times_calculator(self):
-        test_input = CsvReader('/src/Multiplication.csv').data
-        for row in test_input:
-            self.assertEqual(calculator.times(row['Value 1'], row['Value 2']),int(row['Result']))
 
 
 if __name__ == '__main__':
