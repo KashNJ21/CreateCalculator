@@ -1,29 +1,35 @@
+import math
+
 def addition(a, b):
     a = int(a)
     b = int(b)
-    c = a + b
-    return c
+    return a + b
 
-def subtraction(a, b):
+def subtraction(a,b):
     a = int(a)
     b = int(b)
-    c = b - a
-    return c
+    return b - a
 
 def multiplication(a, b):
     a = int(a)
     b = int(b)
-    c = a*b
-
-def division(a, b):
-    c = a / b
+    c = a * b
     return c
 
-def squaring(a):
-    return int(a)**2
+def division(a, b):
+    a = int(a)
+    b = int(b)
+    c = b/a
+    return round(c,9)
 
-def squarerooting(a):
-    return round((int(a)**.5),8)
+def square(a):
+    a = int(a)
+    c = a*a
+    return c
+
+def squareroot(a):
+    a = int(a)
+    return math.sqrt(a)
 
 class Calculator:
     result = 0
@@ -31,7 +37,7 @@ class Calculator:
     def __init__(self):
         pass
 
-    def add(self, a, b):
+    def addition(self, a, b):
         self.result = addition(a, b)
         return self.result
 
@@ -39,19 +45,21 @@ class Calculator:
         self.result = subtraction(a, b)
         return self.result
 
-    def multiply(self, a, b):
+    def multiply(self,a, b):
         self.result = multiplication(a, b)
         return self.result
 
-    def divide(self, a , b):
+    def divide(self, a, b):
         self.result = division(a, b)
         return self.result
 
     def square(self, a):
-        self.result = squaring(a)
+        self.result = square(a)
         return self.result
 
-    def squareroot(self, a):
-        self.result = squarerooting(a)
+    def sqroot(self, a):
+        self.result = squareroot(a)
         return self.result
+
+
 
