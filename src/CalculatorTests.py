@@ -37,5 +37,11 @@ class MyTestCase(unittest.TestCase):
             result = round(calculator.sqroot(int(row['Value 1'])), 8)
             self.assertEqual(result, round(float(row['Result']), 8))
 
+    def test_times_calculator(self):
+        test_input = CsvReader('/src/Multiplication.csv').data
+        for row in test_input:
+            self.assertEqual(calculator.times(row['Value 1'], row['Value 2']),int(row['Result']))
+
+
 if __name__ == '__main__':
     unittest.main()

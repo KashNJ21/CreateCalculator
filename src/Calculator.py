@@ -31,6 +31,12 @@ def squareroot(a):
     a = int(a)
     return math.sqrt(a)
 
+def times(a, b):
+    a = int(a)
+    b = int(b)
+    c = a * b
+    return c
+
 class Calculator:
     result = 0
 
@@ -59,6 +65,10 @@ class Calculator:
 
     def sqroot(self, a):
         self.result = squareroot(a)
+        return self.result
+
+    def times(self,a, b):
+        self.result = multiplication(a, b)
         return self.result
 
 
